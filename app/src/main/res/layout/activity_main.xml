@@ -6,13 +6,88 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:padding="5dp"
+            android:orientation="vertical"
+            app:layout_constraintWidth_percent="100"
+            android:paddingHorizontal="12dp">
+
+        <TableRow>
+
+            <TextView
+                    android:id="@+id/height_text"
+                    android:layout_gravity="center"
+                    android:text="@string/height"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="17sp"
+                    android:paddingHorizontal="8dp" />
+
+            <EditText
+                    android:id="@+id/height"
+
+                    android:layout_width="200dp"
+                    android:layout_gravity="start"
+                    android:inputType="numberDecimal"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:hint="@string/height_hint"
+                    android:paddingHorizontal="8dp"
+                    android:textSize="17sp" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                    android:id="@+id/weight_text"
+                    android:layout_gravity="center"
+                    android:text="@string/weight"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="17sp"
+
+                    android:paddingHorizontal="8dp" />
+
+            <EditText
+                    android:id="@+id/weight"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="start"
+                    android:inputType="numberDecimal"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:hint="@string/weight_hint"
+                    android:paddingHorizontal="8dp"
+                    android:textSize="17sp" />
+        </TableRow>
+
+
+        <TextView
+                android:id="@+id/bmi_text"
+                android:layout_gravity="start"
+                android:text="@string/bmi"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="17sp"
+                android:paddingHorizontal="8dp" />
+
+        <TextView
+                android:id="@+id/bmi"
+                android:layout_gravity="start"
+                android:text="@string/bmi_number"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="17sp"
+                android:paddingHorizontal="8dp" />
+        <Button
+                android:text="@string/submit"
+                android:id="@+id/button"
+                android:layout_gravity="bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+    </TableLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

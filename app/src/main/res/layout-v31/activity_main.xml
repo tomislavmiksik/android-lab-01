@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".MainActivity">
+
+
+    <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="3"
+            android:rowCount="5"
+            android:layout_margin="16dp"
+            android:padding="5dp"
+            tools:context=".layout.GridLayout"
+            app:layout_constraintWidth_percent="100"
+            android:paddingHorizontal="12dp">
+
+        <TextView
+                android:id="@+id/text"
+                android:layout_column="0"
+                android:layout_gravity="start"
+                android:layout_row="1"
+                android:text="@string/height"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:textSize="17sp"
+                android:paddingHorizontal="8dp"/>
+
+        <EditText
+                android:id="@+id/editText1"
+                android:layout_width="160dp"
+                android:layout_column="1"
+                android:layout_gravity="start"
+                android:layout_row="1"
+                android:inputType="numberDecimal"
+                android:layout_height="wrap_content"
+                android:autofillHints="" android:hint="@string/height_hint"
+                android:paddingHorizontal="8dp"/>
+        <Button
+                android:text="@string/submit" android:id="@+id/button"
+                android:layout_row="4"
+                android:layout_columnSpan="3"
+                android:layout_gravity="center"
+                android:allowClickWhenDisabled="false">
+        </Button>
+    </GridLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
