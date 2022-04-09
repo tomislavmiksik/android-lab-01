@@ -2,6 +2,8 @@ package com.example.kalkulatormiksik
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.constraintlayout.widget.ConstraintSet.VISIBLE
 import com.example.kalkulatormiksik.databinding.ActivityMainBinding
 import java.math.RoundingMode
 import java.text.DecimalFormat
@@ -15,7 +17,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setTitle("BMI Calculator")
-
         binding.button.setOnClickListener {
             val df = DecimalFormat("#.##")
             df.roundingMode = RoundingMode.CEILING
