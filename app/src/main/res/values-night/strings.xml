@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="bmi_number" />
+    <string name="submitError">Please enter your weight and height</string>
+    <string name="switchToDarkTheme">Switch to Dark Theme</string>
+    <string name="switchToLightTheme">Switch to Light Theme</string>
 </resources>

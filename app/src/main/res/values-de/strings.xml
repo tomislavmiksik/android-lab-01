@@ -8,4 +8,8 @@
     <string name="submit">Einreichen</string>
     <string name="bmi">BMI:</string>
     <string name="bmi_number" />
+    <string name="switch_themes">Themen wechseln</string>
+    <string name="submitError">Bitte geben Sie Ihr Gewicht und Ihre Größe ein</string>
+    <string name="switchToDarkTheme">Switch to Dark Theme</string>
+    <string name="switchToLightTheme">Switch to Light Theme</string>
 </resources>
