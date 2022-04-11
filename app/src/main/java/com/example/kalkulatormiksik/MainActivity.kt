@@ -32,10 +32,11 @@ class MainActivity : AppCompatActivity() {
                     bmi.text = getString(R.string.submitError)
                     return@setOnClickListener
                 } else {
-                    val weight = weight.text.toString().toDouble()
-                    val height = height.text.toString().toDouble()
-                    val bmi = weight / (height * height)
-                    binding.bmi.text = df.format(bmi)
+                    val weightVal = weight.text.toString().toDouble()
+                    val heightVal = height.text.toString().toDouble()
+                    val bmiVal = weightVal / (heightVal * heightVal) * 10000
+                    print(bmiVal)
+                    bmi.text = df.format(bmiVal)
                 }
             }
 
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
 
-        val nightMode = menu?.findItem(R.id.themeSwitchText)
+        val nightMode = menu?.findItem(R.id.themeSwitch)
         nightMode?.title =
             if (isDarkTheme) getString(R.string.switchToLightTheme) else getString(R.string.switchToDarkTheme)
         nightMode?.setOnMenuItemClickListener {
